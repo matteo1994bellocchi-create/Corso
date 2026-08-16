@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Consolas, monospace;
+
+  --color-brand-50: #f1f0ff;
+  --color-brand-100: #e3e0fe;
+  --color-brand-200: #c7c1fd;
+  --color-brand-300: #a496fb;
+  --color-brand-400: #8168f7;
+  --color-brand-500: #6a44f2;
+  --color-brand-600: #5a2fe0;
+  --color-brand-700: #4b25bd;
+  --color-brand-800: #3d1f99;
+  --color-brand-900: #341c7a;
+
+  --color-accent-400: #34e0c4;
+  --color-accent-500: #14c9ab;
+  --color-accent-600: #0da58a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100;
+  font-family: var(--font-sans);
+}
+
+::selection {
+  @apply bg-brand-300/50;
+}
+
+/* subtle scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-700;
+  border-radius: 9999px;
+}
+
+.prose-body :where(p, ul, ol) {
+  @apply leading-relaxed;
+}

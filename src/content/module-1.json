@@ -1,0 +1,177 @@
+{
+  "slug": "basi-del-prompting",
+  "number": 1,
+  "title": "Le basi del prompting",
+  "subtitle": "Come parlare a un'AI per ottenere output che puoi davvero usare",
+  "estimatedMinutes": 35,
+  "theory": [
+    {
+      "id": "cosa-e-un-prompt",
+      "title": "Cos'è davvero un prompt",
+      "collapsible": true,
+      "defaultOpen": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Un prompt non è una domanda casuale: è un'istruzione che dai a un modello linguistico per ottenere un risultato specifico. La qualità dell'output che ricevi è quasi sempre proporzionale alla qualità e alla precisione dell'input che fornisci. \"Garbage in, garbage out\" vale ancora di più con l'AI che con un normale software." },
+        { "type": "callout", "variant": "insight", "title": "Il modello non legge nella mente", "text": "Un'AI non sa cosa hai in testa. Se ometti il contesto (chi sei, per chi scrivi, cosa vuoi ottenere), il modello riempie i vuoti con ipotesi generiche — e le ipotesi generiche producono output generici." }
+      ]
+    },
+    {
+      "id": "framework-craft",
+      "title": "Il framework C.R.A.F.T.",
+      "collapsible": true,
+      "defaultOpen": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Per scrivere prompt efficaci in modo ripetibile, usa il framework C.R.A.F.T. Ogni lettera è un elemento che, se presente, alza drasticamente la qualità della risposta:" },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Contesto — chi sei, in che settore operi, qual è la situazione di partenza",
+            "Ruolo — che ruolo/competenza chiedi all'AI di impersonare (es. \"copywriter esperto di hospitality\")",
+            "Azione — il compito esatto che vuoi venga svolto, con un verbo chiaro",
+            "Formato — come vuoi ricevere l'output (lista, tabella, email, JSON, lunghezza)",
+            "Tono — il registro comunicativo (professionale, informale, persuasivo, tecnico...)"
+          ]
+        },
+        { "type": "callout", "variant": "tip", "title": "Non serve usare tutte le lettere sempre", "text": "Per compiti semplici bastano 2-3 elementi. Per compiti complessi o ricorrenti (es. un prompt che riuserai ogni settimana), coprire tutte e cinque le dimensioni riduce drasticamente le revisioni." }
+      ]
+    },
+    {
+      "id": "errori-comuni",
+      "title": "Gli errori più comuni di chi inizia",
+      "collapsible": true,
+      "defaultOpen": false,
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Prompt troppo vaghi (\"scrivimi qualcosa sul mio pub\") invece di istruzioni precise",
+            "Nessun esempio di output desiderato quando il formato è insolito",
+            "Chiedere troppe cose in un unico prompt invece di scomporre in passaggi",
+            "Non specificare cosa NON si vuole (es. \"evita linguaggio da marketing aggressivo\")",
+            "Accettare la prima risposta senza iterare con follow-up mirati"
+          ]
+        },
+        { "type": "paragraph", "text": "Il prompting è un dialogo, non un comando singolo. Le AI moderne come Claude mantengono il contesto della conversazione: usa i turni successivi per correggere, restringere o espandere l'output invece di riscrivere tutto da zero." }
+      ]
+    },
+    {
+      "id": "iterazione",
+      "title": "Iterare invece di perfezionare al primo colpo",
+      "collapsible": true,
+      "defaultOpen": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Il flusso più produttivo è: prompt iniziale → valutazione rapida dell'output → correzione mirata (\"accorcia del 30%\", \"rendilo più diretto\", \"aggiungi un CTA\") → ripeti. Questo è molto più veloce che cercare di scrivere il prompt perfetto al primo tentativo." },
+        { "type": "quote", "text": "Il primo prompt raramente è quello giusto. È il punto di partenza di una conversazione, non il traguardo." }
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "id": "esempio-vago-vs-craft",
+      "title": "Prompt vago vs. prompt con C.R.A.F.T.",
+      "collapsible": true,
+      "defaultOpen": true,
+      "blocks": [
+        { "type": "prompt", "example": { "label": "❌ Prompt vago", "prompt": "Scrivimi un post per i social del mio pub." } },
+        { "type": "prompt", "example": {
+            "label": "✅ Prompt con C.R.A.F.T.",
+            "prompt": "Sei un copywriter specializzato in hospitality (Ruolo). Gestisco un pub tradizionale a conduzione familiare nel Regno Unito, il pubblico è locale, età 25-55 (Contesto). Scrivi un post per Instagram che promuova la nostra serata quiz del giovedì (Azione). Formato: massimo 60 parole, con un'emoji iniziale e una call-to-action chiara alla fine (Formato). Tono: amichevole e diretto, zero linguaggio corporate (Tono).",
+            "note": "Nota come ogni riga del prompt corrisponde a una lettera del framework: il risultato è un output pronto all'uso, non una bozza da riscrivere."
+          } }
+      ]
+    },
+    {
+      "id": "esempio-iterazione",
+      "title": "Un esempio di iterazione in 3 turni",
+      "collapsible": true,
+      "defaultOpen": false,
+      "blocks": [
+        { "type": "prompt", "example": { "label": "Turno 1", "prompt": "Crea 3 varianti dell'oggetto email per invitare i clienti fedeli a un evento di degustazione whisky nel mio pub." } },
+        { "type": "prompt", "example": { "label": "Turno 2 (follow-up)", "prompt": "La seconda variante mi piace. Rendila più urgente, aggiungi un accenno ai posti limitati, mantieni sotto i 50 caratteri." } },
+        { "type": "prompt", "example": { "label": "Turno 3 (follow-up)", "prompt": "Perfetto. Ora scrivimi il corpo dell'email coerente con quell'oggetto, tono caldo e personale, come se scrivessi ai clienti abituali che conosco per nome." } }
+      ]
+    }
+  ],
+  "exercise": {
+    "title": "Riscrivi un tuo prompt reale con il framework C.R.A.F.T.",
+    "instructions": "Pensa a un compito che affidi (o vorresti affidare) all'AI per il tuo pub o per SmartPub — una email, un post social, una descrizione di prodotto, una risposta a una recensione. Scrivi prima il prompt \"naturale\" che useresti d'istinto, poi riscrivilo esplicitando tutte e cinque le dimensioni di C.R.A.F.T. Confronta i due output.",
+    "hint": "Se fai fatica a definire il Ruolo, chiediti: \"quale professionista pagherei per fare questo compito?\" e usa quel titolo."
+  },
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Cosa determina principalmente la qualità dell'output di un'AI generativa?",
+      "options": [
+        "Il modello usato, indipendentemente dal prompt",
+        "La qualità e la precisione del prompt fornito",
+        "La lunghezza della conversazione precedente",
+        "L'orario in cui si invia la richiesta"
+      ],
+      "correctIndex": 1,
+      "explanation": "A parità di modello, un prompt preciso e ben strutturato produce output nettamente migliori di uno vago. Il principio \"garbage in, garbage out\" si applica direttamente."
+    },
+    {
+      "id": "q2",
+      "question": "Nel framework C.R.A.F.T., cosa rappresenta la lettera 'R'?",
+      "options": [
+        "Risultato atteso",
+        "Ruolo che l'AI deve impersonare",
+        "Riferimento a fonti esterne",
+        "Revisione del testo"
+      ],
+      "correctIndex": 1,
+      "explanation": "R sta per Ruolo: la competenza o professionalità che chiedi all'AI di impersonare, ad esempio \"copywriter esperto di hospitality\"."
+    },
+    {
+      "id": "q3",
+      "question": "Perché specificare il 'Formato' desiderato nel prompt è importante?",
+      "options": [
+        "Non lo è, l'AI sceglie sempre il formato migliore da sola",
+        "Serve solo per output tecnici come codice o JSON",
+        "Riduce il numero di revisioni necessarie definendo struttura e lunghezza attese",
+        "Serve solo se si lavora con immagini"
+      ],
+      "correctIndex": 2,
+      "explanation": "Definire il formato (lista, tabella, email, lunghezza massima...) evita che l'AI produca un output nella forma sbagliata, riducendo i giri di correzione."
+    },
+    {
+      "id": "q4",
+      "question": "Qual è l'approccio più efficace quando il primo output dell'AI non è perfetto?",
+      "options": [
+        "Riscrivere completamente il prompt da zero ogni volta",
+        "Accettare comunque il risultato per risparmiare tempo",
+        "Dare un follow-up mirato per correggere l'aspetto specifico che non va",
+        "Cambiare modello AI"
+      ],
+      "correctIndex": 2,
+      "explanation": "Il prompting è iterativo: correggere con follow-up mirati (\"accorcia\", \"rendilo più diretto\") è più rapido ed efficace che ripartire da zero."
+    },
+    {
+      "id": "q5",
+      "question": "Quale di questi è un errore comune per chi inizia a usare l'AI?",
+      "options": [
+        "Fornire troppo contesto sul proprio business",
+        "Scomporre un compito complesso in più passaggi",
+        "Scrivere prompt troppo vaghi senza istruzioni precise",
+        "Specificare cosa NON si vuole nell'output"
+      ],
+      "correctIndex": 2,
+      "explanation": "I prompt vaghi (es. \"scrivimi qualcosa sul mio pub\") sono l'errore più frequente: l'AI riempie i vuoti con ipotesi generiche, producendo risultati generici."
+    },
+    {
+      "id": "q6",
+      "question": "Cosa si intende quando si dice che 'il prompting è un dialogo, non un comando singolo'?",
+      "options": [
+        "Bisogna sempre scrivere prompt molto lunghi",
+        "Le AI moderne mantengono il contesto della conversazione e si può affinare l'output nei turni successivi",
+        "Bisogna cambiare argomento ad ogni messaggio",
+        "L'AI dimentica sempre quello che è stato detto prima"
+      ],
+      "correctIndex": 1,
+      "explanation": "Modelli come Claude mantengono il contesto conversazionale: puoi usare i turni successivi per correggere o espandere l'output senza ripartire da zero."
+    }
+  ],
+  "passingScore": 70
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "higgsfield-brand-immagini-video",
+  "number": 4,
+  "title": "Higgsfield — brand, immagini e video",
+  "subtitle": "Generare contenuti visivi coerenti con il brand usando Higgsfield",
+  "estimatedMinutes": 30,
+  "theory": [
+    {
+      "id": "contenuto-in-arrivo",
+      "title": "Contenuto in arrivo",
+      "collapsible": false,
+      "blocks": [
+        { "type": "callout", "variant": "insight", "title": "Modulo in preparazione", "text": "Questo modulo è ancora un placeholder. Incolla il contenuto testuale completo in questo file JSON (src/content/module-4.json) seguendo lo schema descritto in CONTENT_GUIDE.md, poi il quiz verrà generato in modo coerente con quel contenuto." }
+      ]
+    }
+  ],
+  "examples": [],
+  "exercise": {
+    "title": "Esercizio in arrivo",
+    "instructions": "Verrà definito insieme al contenuto completo del modulo."
+  },
+  "quiz": [],
+  "passingScore": 70
+}
