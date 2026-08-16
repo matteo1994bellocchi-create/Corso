@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { CertificatePage } from './pages/CertificatePage';
 import { FinalExamPage } from './pages/FinalExamPage';
@@ -10,7 +10,7 @@ import { ProgressProvider } from './store/ProgressContext';
 function App() {
   return (
     <ProgressProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
@@ -20,7 +20,7 @@ function App() {
             <Route path="/certificato" element={<CertificatePage />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </ProgressProvider>
   );
 }
