@@ -2,23 +2,194 @@
   "slug": "higgsfield-brand-immagini-video",
   "number": 4,
   "title": "Higgsfield — brand, immagini e video",
-  "subtitle": "Generare contenuti visivi coerenti con il brand usando Higgsfield",
-  "estimatedMinutes": 30,
+  "subtitle": "Contenuti visivi coerenti con il tuo brand, senza fotografo né studio",
+  "estimatedMinutes": 35,
   "theory": [
     {
-      "id": "contenuto-in-arrivo",
-      "title": "Contenuto in arrivo",
-      "collapsible": false,
+      "id": "cose-higgsfield",
+      "title": "Cos'è Higgsfield e perché conta per il tuo brand",
+      "collapsible": true,
+      "defaultOpen": true,
       "blocks": [
-        { "type": "callout", "variant": "insight", "title": "Modulo in preparazione", "text": "Questo modulo è ancora un placeholder. Incolla il contenuto testuale completo in questo file JSON (src/content/module-4.json) seguendo lo schema descritto in CONTENT_GUIDE.md, poi il quiz verrà generato in modo coerente con quel contenuto." }
+        { "type": "paragraph", "text": "Higgsfield è una piattaforma per generare immagini e video con l'AI, pensata per chi deve produrre contenuti visivi in modo continuo — social, pubblicità, materiale promozionale — senza organizzare ogni volta un vero shooting fotografico o videomaker. Per un'attività come la tua, significa poter produrre contenuti per un evento del weekend nel giro di un'ora, non di una settimana." },
+        { "type": "callout", "variant": "insight", "title": "Non sostituisce tutto, ma sblocca molto", "text": "Per il piatto signature che vuoi fotografare bene una volta e usare per mesi, uno scatto reale resta spesso la scelta migliore. Ma per contenuti frequenti, variazioni stagionali, teaser di eventi o post ricorrenti, generare con l'AI è più veloce, più economico, e spesso sufficiente." }
+      ]
+    },
+    {
+      "id": "prompting-visivo",
+      "title": "Prompting visivo: come descrivere un'immagine per ottenere coerenza",
+      "collapsible": true,
+      "defaultOpen": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Lo stesso framework C.R.A.F.T. che hai imparato per il testo si applica, con qualche adattamento, anche alle immagini. Al posto del Ruolo e del Tono comunicativo, pensa a stile visivo e atmosfera; al posto del Formato, pensa a inquadratura, proporzioni e utilizzo previsto (storia Instagram, post, banner)." },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Soggetto — cosa deve essere chiaramente visibile e riconoscibile",
+            "Ambientazione — dove si svolge la scena, che atmosfera ha",
+            "Stile — fotografico realistico, illustrazione, cinematico...",
+            "Luce e colore — calda/fredda, naturale/artificiale, la palette del tuo brand",
+            "Inquadratura e formato — primo piano o campo largo, verticale o orizzontale"
+          ]
+        },
+        { "type": "callout", "variant": "tip", "title": "Più sei specifico, meno l'output sembra \"generico da AI\"", "text": "Prompt vaghi come \"un pub accogliente\" producono immagini che sembrano tutte uguali. Dettagli concreti (legno scuro, luci calde basse, un boccale di birra artigianale in primo piano, sera d'inverno) producono immagini che sembrano tue." }
+      ]
+    },
+    {
+      "id": "dalla-foto-al-video",
+      "title": "Dalla foto al video: contenuti brevi per i social",
+      "collapsible": true,
+      "defaultOpen": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Higgsfield permette anche di generare brevi video, utili per teaser di eventi, promemoria, o semplicemente per contenuti più dinamici dei soli post statici. Per i video, oltre agli elementi visivi, conta descrivere il movimento: cosa si muove nella scena, in che direzione, con che ritmo." },
+        { "type": "paragraph", "text": "Per contenuti brevi (10-15 secondi) funziona meglio descrivere un'unica azione chiara piuttosto che una sequenza complessa di più scene — esattamente come nel prompting testuale, un compito alla volta produce risultati migliori di troppe richieste insieme." }
+      ]
+    },
+    {
+      "id": "coerenza-nel-tempo",
+      "title": "Mantenere una coerenza di brand nel tempo",
+      "collapsible": true,
+      "defaultOpen": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Il rischio di generare contenuti visivi al volo è che ogni immagine sembri fatta da un brand diverso. La soluzione è costruire un piccolo \"brief di stile\" personale — poche righe che descrivono la tua palette, l'atmosfera ricorrente, il tipo di inquadrature che usi — e riutilizzarlo come base per ogni nuovo prompt, proprio come le istruzioni personalizzate del Modulo 2." },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Salva 2-3 parole chiave di stile che userai sempre (es. \"caldo, autentico, poca luce artificiale\")",
+            "Usa sempre la stessa palette di colori descritta nel prompt",
+            "Se disponibile, usa immagini di riferimento reali del tuo locale per guidare lo stile"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "errori-comuni-visivi",
+      "title": "Gli errori che rendono un contenuto \"riconoscibile come AI\"",
+      "collapsible": true,
+      "defaultOpen": false,
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Prompt troppo generici (\"un bel piatto di cibo\") invece di dettagli concreti",
+            "Ignorare la coerenza tra un contenuto e l'altro",
+            "Usare contenuti generati per promettere qualcosa che il locale reale non offre davvero (es. un piatto che non esiste nel menu)",
+            "Pubblicare senza controllare dettagli innaturali tipici della generazione AI (mani, testo nelle immagini, oggetti impossibili)"
+          ]
+        },
+        { "type": "callout", "variant": "warning", "title": "Onestà prima di tutto", "text": "Un contenuto generato con l'AI che promette un'esperienza diversa da quella reale (piatti, ambiente, atmosfera) danneggia la fiducia dei clienti più di quanto aiuti il post stesso. Usa l'AI per raccontare meglio la realtà, non per inventarne una diversa." }
       ]
     }
   ],
-  "examples": [],
+  "examples": [
+    {
+      "id": "esempio-prompt-immagine",
+      "title": "Un prompt visivo per un post d'atmosfera",
+      "collapsible": true,
+      "defaultOpen": true,
+      "blocks": [
+        { "type": "prompt", "example": {
+            "label": "Prompt per un'immagine",
+            "prompt": "Interno di un pub tradizionale inglese, sera d'inverno. Tavolo in primo piano con un boccale di birra artigianale e un menu aperto. Sullo sfondo, sfocato, il bancone in legno scuro con luci calde basse e qualche cliente. Atmosfera accogliente e autentica, fotografia realistica, formato verticale per storia Instagram.",
+            "note": "Ogni dettaglio (soggetto, ambientazione, luce, formato) è specificato: il risultato è riproducibile e coerente con il prossimo post."
+          } }
+      ]
+    },
+    {
+      "id": "esempio-prompt-video",
+      "title": "Un prompt per un teaser video breve",
+      "collapsible": true,
+      "defaultOpen": false,
+      "blocks": [
+        { "type": "prompt", "example": {
+            "label": "Prompt per un video di 10 secondi",
+            "prompt": "Video verticale di 10 secondi. La telecamera si avvicina lentamente a un tavolo di pub con boccali di birra che vengono posati, luce calda serale, atmosfera di venerdì sera animato. Nessun testo sovrapposto, solo l'ambientazione.",
+            "note": "Un'unica azione chiara (l'avvicinamento della camera) invece di una sequenza di più scene diverse."
+          } }
+      ]
+    }
+  ],
   "exercise": {
-    "title": "Esercizio in arrivo",
-    "instructions": "Verrà definito insieme al contenuto completo del modulo."
+    "title": "Scrivi il brief di stile del tuo brand",
+    "instructions": "Scrivi un breve \"brief di stile visivo\" per il tuo pub (o per SmartPub): 2-3 parole chiave di atmosfera, una palette di colori, e il tipo di inquadrature che vuoi ricorrano. Poi usa quel brief per scrivere due prompt di immagini diverse (es. un piatto e un momento di socialità) che restino coerenti tra loro nello stile, non solo nel soggetto.",
+    "hint": "Se hai già foto reali del tuo locale che ti piacciono, descrivile a parole: quella descrizione è già un ottimo brief di stile."
   },
-  "quiz": [],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Per quale tipo di contenuto visivo la generazione AI è generalmente più indicata?",
+      "options": [
+        "Il piatto signature da fotografare una volta e usare per mesi",
+        "Contenuti frequenti, variazioni stagionali e teaser di eventi",
+        "Solo contenuti legali e documenti ufficiali",
+        "Nessun caso, meglio sempre uno shooting reale"
+      ],
+      "correctIndex": 1,
+      "explanation": "Per contenuti ricorrenti e veloci da produrre, la generazione AI è più efficiente; per un'immagine \"di punta\" da riusare a lungo, uno scatto reale resta spesso preferibile."
+    },
+    {
+      "id": "q2",
+      "question": "Cosa rende un prompt visivo più efficace di uno generico come \"un pub accogliente\"?",
+      "options": [
+        "Usare parole più lunghe e complesse",
+        "Aggiungere dettagli concreti su soggetto, ambientazione, luce e inquadratura",
+        "Scrivere il prompt in inglese anche se non serve",
+        "Ripetere la stessa parola più volte"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dettagli concreti (materiali, luce, colori, inquadratura) producono immagini distintive invece di risultati generici che sembrano \"uguali a tutti\"."
+    },
+    {
+      "id": "q3",
+      "question": "Per un video breve (10-15 secondi), qual è l'approccio migliore nel prompt?",
+      "options": [
+        "Descrivere quante più scene diverse possibile",
+        "Descrivere un'unica azione chiara e il suo movimento",
+        "Evitare di descrivere qualsiasi movimento",
+        "Concentrarsi solo sul testo sovrapposto al video"
+      ],
+      "correctIndex": 1,
+      "explanation": "Come nel prompting testuale, un compito chiaro alla volta produce risultati migliori di troppe richieste (scene) insieme in un video breve."
+    },
+    {
+      "id": "q4",
+      "question": "Come si mantiene la coerenza di brand tra contenuti generati in momenti diversi?",
+      "options": [
+        "Non è possibile ottenere coerenza con l'AI",
+        "Riutilizzando un piccolo brief di stile (palette, atmosfera, inquadrature) come base per ogni prompt",
+        "Generando ogni immagine con uno stile completamente diverso",
+        "Serve necessariamente un designer professionista"
+      ],
+      "correctIndex": 1,
+      "explanation": "Un brief di stile riutilizzato in ogni prompt (come le istruzioni personalizzate del Modulo 2) mantiene coerenza visiva nel tempo."
+    },
+    {
+      "id": "q5",
+      "question": "Perché è importante non usare contenuti generati per promettere qualcosa che il locale reale non offre?",
+      "options": [
+        "Non è un problema, i clienti non se ne accorgono mai",
+        "Perché danneggia la fiducia dei clienti più di quanto aiuti il post",
+        "Perché è vietato dalla legge in ogni caso",
+        "Perché le immagini generate sono sempre di bassa qualità"
+      ],
+      "correctIndex": 1,
+      "explanation": "Un contenuto che promette un'esperienza diversa dalla realtà (piatti, ambiente) crea aspettative disattese e danneggia la fiducia nel brand."
+    },
+    {
+      "id": "q6",
+      "question": "Cosa bisogna controllare prima di pubblicare un contenuto generato con l'AI?",
+      "options": [
+        "Niente, è sempre pronto all'uso",
+        "Solo la lunghezza del file",
+        "Dettagli innaturali tipici della generazione AI (mani, testo nelle immagini, oggetti impossibili)",
+        "Il numero di like che potrebbe ricevere"
+      ],
+      "correctIndex": 2,
+      "explanation": "I contenuti generati possono contenere errori tipici (mani, testo distorto, oggetti impossibili) che vanno controllati prima della pubblicazione."
+    }
+  ],
   "passingScore": 70
 }

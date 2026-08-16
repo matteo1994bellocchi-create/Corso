@@ -2,23 +2,185 @@
   "slug": "claude-progettazione-e-struttura",
   "number": 2,
   "title": "Claude — progettazione e struttura",
-  "subtitle": "Come progettare conversazioni e prompt strutturati con Claude",
-  "estimatedMinutes": 30,
+  "subtitle": "Trasformare Claude da chatbot occasionale a collaboratore affidabile e ripetibile",
+  "estimatedMinutes": 40,
   "theory": [
     {
-      "id": "contenuto-in-arrivo",
-      "title": "Contenuto in arrivo",
-      "collapsible": false,
+      "id": "perche-la-struttura-conta",
+      "title": "Perché con Claude la struttura conta ancora di più",
+      "collapsible": true,
+      "defaultOpen": true,
       "blocks": [
-        { "type": "callout", "variant": "insight", "title": "Modulo in preparazione", "text": "Questo modulo è ancora un placeholder. Incolla il contenuto testuale completo in questo file JSON (src/content/module-2.json) seguendo lo schema descritto in CONTENT_GUIDE.md, poi il quiz verrà generato in modo coerente con quel contenuto." }
+        { "type": "paragraph", "text": "Nel Modulo 1 hai imparato a scrivere un buon prompt \"una tantum\". Ora il salto di qualità: smettere di ripartire da zero ogni volta. Claude è pensato per gestire conversazioni lunghe, documenti interi e istruzioni stabili nel tempo — se lo usi solo per domande isolate, stai sfruttando forse il 20% di quello che può fare per il tuo lavoro quotidiano." },
+        { "type": "callout", "variant": "insight", "title": "La differenza tra chiedere e progettare", "text": "Chiedere è \"scrivimi questa email\". Progettare è costruire un'istruzione che userai 50 volte, che produce sempre lo stesso standard di qualità senza doverla riscrivere ogni volta. Questo modulo ti insegna a progettare, non solo a chiedere." }
+      ]
+    },
+    {
+      "id": "istruzioni-stabili",
+      "title": "Dare a Claude un ruolo stabile: le istruzioni personalizzate",
+      "collapsible": true,
+      "defaultOpen": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Invece di ripetere ogni volta \"gestisco un pub nel Regno Unito, il pubblico è locale...\", puoi impostare queste informazioni una sola volta come istruzioni personalizzate (o come primo messaggio di un Project dedicato). Da quel momento, ogni conversazione parte già sapendo chi sei, senza che tu debba rispiegarlo." },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Chi sei e cosa fai (settore, tipo di attività, pubblico)",
+            "Come vuoi che Claude si comporti di default (tono, livello di dettaglio, cosa evitare sempre)",
+            "Formati che usi spesso (es. \"quando scrivi email, firmale sempre così\")",
+            "Vincoli permanenti (es. \"non usare mai la parola 'sinergia' o linguaggio da marketing aggressivo\")"
+          ]
+        },
+        { "type": "callout", "variant": "tip", "title": "Un'istruzione stabile vale 50 prompt scritti bene", "text": "Il tempo che investi a scrivere bene le istruzioni personalizzate una volta si ripaga ad ogni conversazione successiva. È lo stesso principio di scrivere un buon manuale operativo per un nuovo dipendente: lo scrivi una volta, lo usi per mesi." }
+      ]
+    },
+    {
+      "id": "prompt-strutturati",
+      "title": "Strutturare prompt complessi con sezioni ed esempi",
+      "collapsible": true,
+      "defaultOpen": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Quando un compito è complesso (più input, più vincoli, un formato preciso), un unico paragrafo di prompt diventa difficile da seguire anche per l'AI. La soluzione è dividere il prompt in sezioni chiaramente etichettate — con tag semplici tipo <contesto>, <compito>, <vincoli>, <esempio> — così ogni parte del prompt ha un ruolo chiaro e Claude non rischia di \"mescolare\" le istruzioni." },
+        { "type": "paragraph", "text": "Un'altra tecnica potente è il few-shot prompting: invece di descrivere a parole il risultato che vuoi, mostri 1-2 esempi concreti di input → output. Claude impara il pattern dagli esempi molto più velocemente che da una descrizione astratta." },
+        { "type": "callout", "variant": "insight", "title": "Mostra, non solo raccontare", "text": "Se hai già scritto a mano un buon esempio di email, post o risposta, incollalo nel prompt come riferimento (\"scrivi nello stesso stile di questo esempio\"). È il modo più veloce per ottenere qualcosa che suoni davvero come te." }
+      ]
+    },
+    {
+      "id": "documenti-lunghi",
+      "title": "Claude e i documenti lunghi: caricare, riassumere, estrarre",
+      "collapsible": true,
+      "defaultOpen": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Claude gestisce bene conversazioni e documenti lunghi: puoi incollare o caricare un intero contratto, un report, un elenco di recensioni, e chiedere di riassumere, estrarre dati specifici, o confrontare più fonti. La stessa logica del framework C.R.A.F.T. si applica anche qui: dì chiaramente cosa cercare, in che formato vuoi il risultato e cosa ignorare." },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Riassumere un lungo contratto di fornitura evidenziando solo le clausole di recesso e prezzo",
+            "Estrarre da 50 recensioni i 5 temi più ricorrenti, positivi e negativi",
+            "Confrontare due preventivi di fornitori e evidenziare le differenze concrete"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conversazioni-riutilizzabili",
+      "title": "Progettare conversazioni pensate per essere riutilizzate",
+      "collapsible": true,
+      "defaultOpen": false,
+      "blocks": [
+        { "type": "paragraph", "text": "L'errore più comune di chi usa Claude ogni giorno è trattare ogni conversazione come usa e getta. Se un flusso di lavoro si ripete (es. \"ogni lunedì scrivo il riepilogo settimanale del pub\"), vale la pena salvare il prompt che lo genera — come un piccolo strumento personale che riutilizzi, invece di reinventarlo ogni volta." },
+        { "type": "quote", "text": "Il prompt migliore non è quello scritto meglio una volta: è quello che non devi più riscrivere." }
       ]
     }
   ],
-  "examples": [],
+  "examples": [
+    {
+      "id": "esempio-istruzioni-personalizzate",
+      "title": "Un set di istruzioni personalizzate per il tuo contesto",
+      "collapsible": true,
+      "defaultOpen": true,
+      "blocks": [
+        { "type": "prompt", "example": {
+            "label": "Istruzioni personalizzate / prompt di apertura di un Project",
+            "prompt": "Gestisco un pub tradizionale a conduzione familiare nel Regno Unito e sto sviluppando SmartPub, un SaaS per il settore hospitality. Quando ti chiedo contenuti scritti (email, post, descrizioni), usa sempre un tono amichevole e diretto, mai da grande azienda. Quando ti chiedo analisi o consigli sul business, sii concreto e pratico, evita liste generiche di \"best practice\" che troverei anche cercando su Google. Se una mia richiesta è ambigua, fammi una domanda invece di indovinare.",
+            "note": "Impostato una volta, questo contesto resta valido per tutte le conversazioni successive in quel Project."
+          } }
+      ]
+    },
+    {
+      "id": "esempio-prompt-strutturato",
+      "title": "Un prompt complesso diviso in sezioni",
+      "collapsible": true,
+      "defaultOpen": false,
+      "blocks": [
+        { "type": "prompt", "example": {
+            "label": "Prompt strutturato con sezioni",
+            "prompt": "<contesto>\nGestisco un pub. Ogni venerdì mando una newsletter ai clienti iscritti (circa 300 persone) con gli eventi del weekend.\n</contesto>\n\n<compito>\nScrivi la newsletter di questa settimana. Eventi: musica dal vivo venerdì sera, torneo di freccette sabato pomeriggio, pranzo della domenica con menu speciale.\n</compito>\n\n<formato>\nOggetto + corpo email, massimo 150 parole, con un titoletto per ciascun evento.\n</formato>\n\n<esempio_di_stile>\n\"Ciao [Nome], il weekend al pub si preannuncia niente male...\"\n</esempio_di_stile>",
+            "note": "Ogni sezione ha un compito preciso: Claude non deve indovinare cosa è contesto e cosa è istruzione, è già etichettato."
+          } }
+      ]
+    }
+  ],
   "exercise": {
-    "title": "Esercizio in arrivo",
-    "instructions": "Verrà definito insieme al contenuto completo del modulo."
+    "title": "Scrivi le tue istruzioni personalizzate",
+    "instructions": "Scrivi un set di istruzioni personalizzate (o il prompt di apertura di un Project dedicato) che descriva il tuo contesto, il tono che vuoi di default, e almeno un vincolo permanente (qualcosa che Claude non deve mai fare). Poi usale per un compito reale e confronta il risultato con quello che avresti ottenuto senza quel contesto pre-impostato.",
+    "hint": "Pensa alle 3-4 informazioni che ripeti quasi sempre nei tuoi prompt: quelle sono le prime candidate da rendere permanenti."
   },
-  "quiz": [],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Qual è il principale vantaggio di impostare istruzioni personalizzate stabili invece di ripetere il contesto ogni volta?",
+      "options": [
+        "Rende le risposte più corte automaticamente",
+        "Elimina la necessità di controllare l'output",
+        "Risparmia tempo e garantisce coerenza su tutte le conversazioni successive",
+        "È obbligatorio per usare Claude"
+      ],
+      "correctIndex": 2,
+      "explanation": "Le istruzioni stabili funzionano come un manuale operativo: le scrivi una volta e valgono per tutte le conversazioni future, con meno tempo speso e più coerenza."
+    },
+    {
+      "id": "q2",
+      "question": "Cos'è il \"few-shot prompting\"?",
+      "options": [
+        "Scrivere prompt molto brevi",
+        "Mostrare 1-2 esempi concreti di input/output invece di descrivere a parole il risultato desiderato",
+        "Fare più domande di fila senza aspettare risposta",
+        "Usare solo domande a risposta chiusa"
+      ],
+      "correctIndex": 1,
+      "explanation": "Il few-shot prompting mostra esempi concreti da cui l'AI impara il pattern desiderato, spesso più efficace di una descrizione astratta."
+    },
+    {
+      "id": "q3",
+      "question": "Perché dividere un prompt complesso in sezioni etichettate (contesto, compito, formato...) è utile?",
+      "options": [
+        "Non è utile, complica solo il prompt",
+        "Serve solo per il codice di programmazione",
+        "Evita che l'AI mescoli istruzioni diverse, rendendo ogni parte del prompt inequivocabile",
+        "Rende il prompt più breve"
+      ],
+      "correctIndex": 2,
+      "explanation": "Etichettare le sezioni di un prompt complesso riduce l'ambiguità: ogni parte ha un ruolo chiaro, invece di essere mescolata in un unico paragrafo."
+    },
+    {
+      "id": "q4",
+      "question": "Quale di questi è un buon uso di Claude con documenti lunghi?",
+      "options": [
+        "Incollare il documento senza dire cosa fare con esso",
+        "Chiedere di riassumere evidenziando solo gli elementi specifici richiesti (es. clausole di prezzo)",
+        "Chiedere sempre un riassunto generico di tutto il documento",
+        "Evitare di usare l'AI per documenti lunghi perché non è affidabile"
+      ],
+      "correctIndex": 1,
+      "explanation": "Come per ogni prompt, specificare cosa cercare e in che formato produce risultati molto più utili di una richiesta generica."
+    },
+    {
+      "id": "q5",
+      "question": "Cosa si intende con \"progettare conversazioni riutilizzabili\"?",
+      "options": [
+        "Copiare sempre la stessa identica conversazione",
+        "Salvare e riusare prompt per flussi di lavoro ricorrenti, invece di reinventarli ogni volta",
+        "Usare Claude una sola volta a settimana",
+        "Evitare di modificare mai un prompt già scritto"
+      ],
+      "correctIndex": 1,
+      "explanation": "Se un compito si ripete (es. il riepilogo settimanale), conviene salvare il prompt che lo genera come un piccolo strumento personale riutilizzabile."
+    },
+    {
+      "id": "q6",
+      "question": "Qual è un esempio corretto di vincolo permanente da inserire nelle istruzioni personalizzate?",
+      "options": [
+        "\"Rispondi sempre in meno di 10 parole\"",
+        "\"Non usare mai linguaggio da marketing aggressivo o parole come 'sinergia'\"",
+        "\"Usa sempre un emoji diverso a ogni frase\"",
+        "\"Cambia argomento ogni due messaggi\""
+      ],
+      "correctIndex": 1,
+      "explanation": "Un vincolo permanente utile è specifico e riguarda uno stile o comportamento che vuoi evitare sempre, come un certo tipo di linguaggio."
+    }
+  ],
   "passingScore": 70
 }

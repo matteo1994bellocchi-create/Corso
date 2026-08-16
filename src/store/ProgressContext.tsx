@@ -8,6 +8,7 @@ type ProgressContextValue = {
   recordFinalExamAttempt: (scorePct: number, passingScore: number) => void;
   setOpenAnswer: (questionId: string, text: string) => void;
   toggleChecklistTick: (questionId: string, itemIndex: number) => void;
+  setStudentName: (name: string) => void;
   resetAll: () => void;
 };
 
@@ -82,14 +83,26 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
     });
   }, []);
 
+  const setStudentName = useCallback((name: string) => {
+    setState((prev) => ({ ...prev, studentName: name }));
+  }, []);
+
   const resetAll = useCallback(() => {
     clearStoredProgress();
     setState({ ...emptyProgressState, finalExam: { ...emptyFinalExamProgress } });
   }, []);
 
   const value = useMemo<ProgressContextValue>(
-    () => ({ state, recordModuleAttempt, recordFinalExamAttempt, setOpenAnswer, toggleChecklistTick, resetAll }),
-    [state, recordModuleAttempt, recordFinalExamAttempt, setOpenAnswer, toggleChecklistTick, resetAll],
+    () => ({
+      state,
+      recordModuleAttempt,
+      recordFinalExamAttempt,
+      setOpenAnswer,
+      toggleChecklistTick,
+      setStudentName,
+      resetAll,
+    }),
+    [state, recordModuleAttempt, recordFinalExamAttempt, setOpenAnswer, toggleChecklistTick, setStudentName, resetAll],
   );
 
   return <ProgressContext.Provider value={value}>{children}</ProgressContext.Provider>;

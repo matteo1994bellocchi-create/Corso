@@ -2,23 +2,182 @@
   "slug": "agenti-e-assistenti-personalizzati",
   "number": 5,
   "title": "Creare agenti e assistenti personalizzati",
-  "subtitle": "Progettare agenti AI su misura per compiti e workflow reali",
-  "estimatedMinutes": 30,
+  "subtitle": "Da conversazioni singole a piccoli sistemi che lavorano per te",
+  "estimatedMinutes": 40,
   "theory": [
     {
-      "id": "contenuto-in-arrivo",
-      "title": "Contenuto in arrivo",
-      "collapsible": false,
+      "id": "cose-un-agente",
+      "title": "Cos'è davvero un \"agente\" (e cosa non è)",
+      "collapsible": true,
+      "defaultOpen": true,
       "blocks": [
-        { "type": "callout", "variant": "insight", "title": "Modulo in preparazione", "text": "Questo modulo è ancora un placeholder. Incolla il contenuto testuale completo in questo file JSON (src/content/module-5.json) seguendo lo schema descritto in CONTENT_GUIDE.md, poi il quiz verrà generato in modo coerente con quel contenuto." }
+        { "type": "paragraph", "text": "Un agente non è un'AI più \"intelligente\" — è un'AI a cui hai dato istruzioni stabili, un compito specifico e ricorrente, e a volte la possibilità di usare strumenti (leggere un file, cercare informazioni, compilare un modulo) senza che tu debba guidarla passo passo ogni volta. La differenza tra un prompt e un agente è la stessa che c'è tra chiedere un favore una volta e assumere qualcuno per farlo ogni settimana." },
+        { "type": "callout", "variant": "insight", "title": "Non serve saper programmare", "text": "Costruire un agente semplice, oggi, è più simile a scrivere una procedura operativa dettagliata che a scrivere codice. Se sai spiegare a un nuovo collaboratore come svolgere un compito, hai già la competenza di base per progettare un agente." }
+      ]
+    },
+    {
+      "id": "ingredienti-buon-agente",
+      "title": "Gli ingredienti di un buon agente",
+      "collapsible": true,
+      "defaultOpen": true,
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Istruzioni chiare e stabili — lo stesso principio del Modulo 2, ma pensate per un compito specifico e ripetuto",
+            "Uno scopo ristretto — un agente che fa bene una cosa batte sempre un agente che prova a fare tutto",
+            "Strumenti definiti — cosa può effettivamente fare (leggere, scrivere, cercare) e cosa no",
+            "Criteri di successo chiari — come capisce se ha fatto un buon lavoro, non solo se ha \"risposto qualcosa\""
+          ]
+        },
+        { "type": "paragraph", "text": "Più l'ambito è ristretto, più l'agente è affidabile. Un agente che \"risponde a tutte le domande sul pub\" è vago e imprevedibile; un agente che \"scrive una prima bozza di risposta alle recensioni negative, da rivedere sempre prima di pubblicare\" è specifico, verificabile, e utile fin da subito." }
+      ]
+    },
+    {
+      "id": "progettare-per-compito",
+      "title": "Progettare un agente per un compito specifico e ripetitivo",
+      "collapsible": true,
+      "defaultOpen": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Il modo migliore per iniziare non è pensare in astratto a \"che agente potrei costruire\", ma guardare alla tua settimana e individuare un compito che rifai identico più volte: rispondere alle stesse domande frequenti, scrivere un riepilogo ricorrente, fare una prima scrematura di email o messaggi. Quel compito ripetitivo è il miglior candidato per il primo agente." },
+        { "type": "callout", "variant": "tip", "title": "Parti da un compito che già sai fare bene tu", "text": "Se sai già come vorresti che venisse svolto un compito, è molto più facile scrivere istruzioni chiare per un agente che lo replichi — rispetto a un compito che nemmeno tu hai mai standardizzato." }
+      ]
+    },
+    {
+      "id": "guardrail",
+      "title": "Guardrail: cosa un agente non dovrebbe mai fare da solo",
+      "collapsible": true,
+      "defaultOpen": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Man mano che un agente diventa più capace, cresce anche la tentazione di lasciargli fare tutto in autonomia. È qui che serve disciplina: alcune azioni vanno sempre passate a una revisione umana prima di essere eseguite, soprattutto quando sono difficili da annullare — inviare un'email a un cliente, pubblicare un post, confermare un ordine, spendere denaro." },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Azioni reversibili (bozze, suggerimenti) → l'agente può farle in autonomia",
+            "Azioni visibili all'esterno o difficili da annullare (invii, pubblicazioni, pagamenti) → sempre una revisione umana prima",
+            "Se un agente sbaglia spesso su un certo tipo di compito, è un segnale per restringere ulteriormente il suo ambito, non per dargli più libertà"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dal-prototipo-al-uso-quotidiano",
+      "title": "Dal prototipo all'uso quotidiano",
+      "collapsible": true,
+      "defaultOpen": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Un agente, come un prompt, raramente è perfetto al primo tentativo. Trattalo come un collaboratore alle prime armi: guarda cosa produce, correggi le istruzioni quando sbaglia in modo sistematico (non solo una volta), e nel tempo l'affidabilità cresce. La differenza rispetto a correggere una persona è che le istruzioni corrette restano valide per sempre, senza bisogno di ripetere la formazione." },
+        { "type": "quote", "text": "Un buon agente non è quello che non sbaglia mai. È quello il cui ambito è abbastanza ristretto da renderlo affidabile, e i cui errori sono facili da correggere alla radice." }
       ]
     }
   ],
-  "examples": [],
+  "examples": [
+    {
+      "id": "esempio-agente-recensioni",
+      "title": "Istruzioni per un agente che aiuta con le recensioni",
+      "collapsible": true,
+      "defaultOpen": true,
+      "blocks": [
+        { "type": "prompt", "example": {
+            "label": "Istruzioni dell'agente",
+            "prompt": "Il tuo unico compito è scrivere una bozza di risposta alle recensioni online del pub. Leggi la recensione e scrivi una risposta breve (massimo 60 parole), calda e specifica al contenuto della recensione — mai un testo generico. Se la recensione è negativa, riconosci il problema senza scuse eccessive, e invita a scrivere in privato per risolvere. Non pubblicare mai la risposta automaticamente: consegnala sempre come bozza da rivedere prima.",
+            "note": "Ambito ristretto (solo bozze di risposta), criterio di successo chiaro (specifica, non generica), e un guardrail esplicito (mai pubblicare da solo)."
+          } }
+      ]
+    },
+    {
+      "id": "esempio-agente-riepilogo",
+      "title": "Istruzioni per un agente di riepilogo settimanale",
+      "collapsible": true,
+      "defaultOpen": false,
+      "blocks": [
+        { "type": "prompt", "example": {
+            "label": "Istruzioni dell'agente",
+            "prompt": "Ogni lunedì, a partire dai dati che ti fornisco (incassi giornalieri, eventi della settimana, eventuali note), scrivi un riepilogo di massimo 150 parole con: 1) andamento generale rispetto alla settimana precedente, 2) evento o giorno più forte, 3) un'osservazione utile per la settimana successiva. Tono diretto, zero giri di parole. Se mancano dati per fare un confronto, dillo esplicitamente invece di inventare numeri."
+          } }
+      ]
+    }
+  ],
   "exercise": {
-    "title": "Esercizio in arrivo",
-    "instructions": "Verrà definito insieme al contenuto completo del modulo."
+    "title": "Progetta il tuo primo agente",
+    "instructions": "Individua un compito che rifai identico, o quasi, più volte a settimana nel tuo pub o in SmartPub. Scrivi le istruzioni complete per un agente che lo svolga: ambito, formato dell'output, criteri di successo, e almeno un guardrail esplicito (cosa non deve mai fare da solo). Prova quelle istruzioni con un caso reale e valuta se il risultato è già utilizzabile come bozza.",
+    "hint": "Se il compito che hai in mente è troppo ampio per essere descritto in poche righe chiare, è un segnale che va diviso in due agenti più piccoli, non in uno più complesso."
   },
-  "quiz": [],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Qual è la differenza principale tra un semplice prompt e un agente?",
+      "options": [
+        "Un agente usa sempre un modello AI diverso e più potente",
+        "Un agente ha istruzioni stabili, un compito ricorrente definito, ed eventualmente strumenti per agire senza guida passo-passo",
+        "Non c'è nessuna differenza reale",
+        "Un agente richiede sempre di saper programmare"
+      ],
+      "correctIndex": 1,
+      "explanation": "Un agente si distingue per istruzioni stabili nel tempo, un ambito di compito ricorrente e, quando serve, la capacità di usare strumenti in autonomia."
+    },
+    {
+      "id": "q2",
+      "question": "Perché un ambito ristretto rende un agente più affidabile?",
+      "options": [
+        "Perché un agente con uno scopo specifico è più prevedibile e verificabile di uno che prova a fare tutto",
+        "Non è vero, un ambito ampio è sempre meglio",
+        "Perché riduce il numero di parole nelle istruzioni",
+        "Solo per motivi di costo, non di affidabilità"
+      ],
+      "correctIndex": 0,
+      "explanation": "Un agente con uno scopo ristretto e ben definito è più prevedibile: è più facile capire quando ha fatto un buon lavoro e correggerlo se sbaglia."
+    },
+    {
+      "id": "q3",
+      "question": "Quale tipo di azione dovrebbe sempre passare da una revisione umana prima di essere eseguita da un agente?",
+      "options": [
+        "Scrivere una bozza interna da rivedere",
+        "Suggerire un'idea di testo",
+        "Inviare un'email a un cliente o pubblicare un contenuto pubblico",
+        "Fare un riassunto per uso personale"
+      ],
+      "correctIndex": 2,
+      "explanation": "Le azioni visibili all'esterno o difficili da annullare (invii, pubblicazioni, pagamenti) devono sempre passare da un controllo umano prima di essere eseguite."
+    },
+    {
+      "id": "q4",
+      "question": "Qual è il miglior punto di partenza per progettare il proprio primo agente?",
+      "options": [
+        "Un'idea astratta e ambiziosa di automazione totale del business",
+        "Un compito ripetitivo che già sai fare bene tu stesso",
+        "Copiare un agente trovato online senza adattarlo",
+        "Il compito più complesso possibile, per sfruttare al massimo l'AI"
+      ],
+      "correctIndex": 1,
+      "explanation": "Un compito ripetitivo che sai già svolgere bene è più facile da tradurre in istruzioni chiare per un agente, rispetto a un compito mai standardizzato."
+    },
+    {
+      "id": "q5",
+      "question": "Cosa bisognerebbe fare se un agente sbaglia spesso lo stesso tipo di compito?",
+      "options": [
+        "Dargli più libertà d'azione per compensare",
+        "Ignorare l'errore se capita raramente",
+        "Correggere le istruzioni alla radice o restringere ulteriormente il suo ambito",
+        "Cambiare completamente argomento all'agente ogni volta"
+      ],
+      "correctIndex": 2,
+      "explanation": "Un errore sistematico è un segnale che le istruzioni vanno corrette o l'ambito ristretto, non che l'agente merita più autonomia."
+    },
+    {
+      "id": "q6",
+      "question": "Cosa distingue un'istruzione utile (\"scrivi una bozza di risposta alle recensioni negative, mai pubblicarla da sola\") da una vaga (\"rispondi a tutte le domande sul pub\")?",
+      "options": [
+        "La lunghezza del testo",
+        "La prima ha ambito ristretto, criterio di successo chiaro e un guardrail esplicito; la seconda è generica e imprevedibile",
+        "Nessuna differenza pratica",
+        "La prima richiede più tempo di scrittura, quindi è peggiore"
+      ],
+      "correctIndex": 1,
+      "explanation": "Un'istruzione specifica, con ambito ristretto e guardrail chiari, produce un agente prevedibile e verificabile; una vaga produce risultati imprevedibili."
+    }
+  ],
   "passingScore": 70
 }

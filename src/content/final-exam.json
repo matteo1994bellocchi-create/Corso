@@ -1,6 +1,351 @@
 {
   "title": "Esame finale — AI per Fare Soldi",
   "passingScore": 70,
-  "mcq": [],
-  "openQuestions": []
+  "mcq": [
+    {
+      "id": "fe1",
+      "moduleRef": 1,
+      "question": "Nel framework C.R.A.F.T., cosa rappresentano nell'ordine le cinque lettere?",
+      "options": [
+        "Contenuto, Ricerca, Analisi, Formattazione, Test",
+        "Contesto, Ruolo, Azione, Formato, Tono",
+        "Chiarezza, Rapidità, Accuratezza, Flessibilità, Trasparenza",
+        "Contesto, Revisione, Approvazione, Feedback, Traguardo"
+      ],
+      "correctIndex": 1,
+      "explanation": "C.R.A.F.T. = Contesto, Ruolo, Azione, Formato, Tono: i cinque elementi che alzano la qualità di un prompt."
+    },
+    {
+      "id": "fe2",
+      "moduleRef": 1,
+      "question": "Perché un prompt vago produce quasi sempre un output generico?",
+      "options": [
+        "Perché l'AI si rifiuta di rispondere a prompt brevi",
+        "Perché l'AI riempie i vuoti con ipotesi generiche quando mancano dettagli",
+        "Perché serve sempre pagare un abbonamento premium",
+        "Perché i prompt brevi vengono ignorati dal sistema"
+      ],
+      "correctIndex": 1,
+      "explanation": "Senza contesto specifico, l'AI colma i vuoti con supposizioni generiche, che producono risultati altrettanto generici."
+    },
+    {
+      "id": "fe3",
+      "moduleRef": 1,
+      "question": "Qual è l'approccio più efficace quando un primo output dell'AI non convince del tutto?",
+      "options": [
+        "Ripartire sempre da un prompt completamente nuovo",
+        "Accettarlo comunque per risparmiare tempo",
+        "Correggere con un follow-up mirato sull'aspetto specifico da migliorare",
+        "Cambiare argomento"
+      ],
+      "correctIndex": 2,
+      "explanation": "Il prompting è iterativo: un follow-up mirato è più efficace che ripartire da zero."
+    },
+    {
+      "id": "fe4",
+      "moduleRef": 1,
+      "question": "Quale di queste è considerata una buona pratica nel prompting di base?",
+      "options": [
+        "Chiedere il più possibile in un unico prompt per risparmiare tempo",
+        "Specificare anche cosa NON si vuole nell'output, quando è rilevante",
+        "Evitare sempre di dare esempi concreti",
+        "Non specificare mai il formato desiderato"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dire esplicitamente cosa evitare (es. un certo tono) riduce ambiguità e revisioni, come visto nel Modulo 1."
+    },
+    {
+      "id": "fe5",
+      "moduleRef": 2,
+      "question": "A cosa servono principalmente le istruzioni personalizzate stabili in Claude?",
+      "options": [
+        "A rendere le risposte automaticamente più brevi",
+        "A evitare di ripetere lo stesso contesto in ogni conversazione, con più coerenza nel tempo",
+        "A sbloccare funzionalità a pagamento",
+        "Servono solo per compiti di programmazione"
+      ],
+      "correctIndex": 1,
+      "explanation": "Le istruzioni stabili impostano contesto e stile una sola volta, valide per tutte le conversazioni successive."
+    },
+    {
+      "id": "fe6",
+      "moduleRef": 2,
+      "question": "Cos'è il few-shot prompting?",
+      "options": [
+        "Fare domande molto brevi",
+        "Mostrare esempi concreti di input/output per far apprendere il pattern desiderato",
+        "Limitare il numero di messaggi in una conversazione",
+        "Usare solo domande a risposta chiusa"
+      ],
+      "correctIndex": 1,
+      "explanation": "Mostrare esempi concreti aiuta l'AI a replicare un pattern desiderato più efficacemente di una descrizione astratta."
+    },
+    {
+      "id": "fe7",
+      "moduleRef": 2,
+      "question": "Qual è il vantaggio di dividere un prompt complesso in sezioni etichettate (contesto, compito, formato...)?",
+      "options": [
+        "Nessuno, complica solo la lettura",
+        "Riduce l'ambiguità, dando a ogni parte del prompt un ruolo chiaro",
+        "Funziona solo per la generazione di immagini",
+        "Serve solo se il prompt è molto breve"
+      ],
+      "correctIndex": 1,
+      "explanation": "Le sezioni etichettate evitano che istruzioni diverse vengano mescolate o fraintese dall'AI."
+    },
+    {
+      "id": "fe8",
+      "moduleRef": 2,
+      "question": "Cosa significa progettare \"conversazioni riutilizzabili\" con Claude?",
+      "options": [
+        "Usare sempre la stessa identica domanda",
+        "Salvare prompt per compiti ricorrenti invece di reinventarli ogni volta",
+        "Non modificare mai un prompt già scritto",
+        "Evitare di usare Claude più di una volta al giorno"
+      ],
+      "correctIndex": 1,
+      "explanation": "Se un compito si ripete, conviene salvare e riusare il prompt che lo genera, come un piccolo strumento personale."
+    },
+    {
+      "id": "fe9",
+      "moduleRef": 3,
+      "question": "Cosa costruisce concretamente Lovable a partire da un prompt?",
+      "options": [
+        "Solo mockup grafici statici",
+        "Un'applicazione web reale con frontend, backend e database",
+        "Solo presentazioni per i clienti",
+        "Documenti di testo formattati"
+      ],
+      "correctIndex": 1,
+      "explanation": "Lovable genera un'applicazione funzionante completa, non solo una rappresentazione visiva."
+    },
+    {
+      "id": "fe10",
+      "moduleRef": 3,
+      "question": "Qual è l'approccio consigliato per iniziare a costruire un'app con Lovable?",
+      "options": [
+        "Descrivere subito tutte le funzionalità possibili in un unico prompt",
+        "Partire da una versione minima funzionante e aggiungere funzionalità un passo alla volta",
+        "Costruire prima la grafica senza pensare ai dati",
+        "Evitare di testare l'app finché non è completa"
+      ],
+      "correctIndex": 1,
+      "explanation": "Costruire in modo incrementale, verificando ogni passaggio, produce risultati più solidi."
+    },
+    {
+      "id": "fe11",
+      "moduleRef": 3,
+      "question": "Perché conviene definire i dati (es. tavoli, prenotazioni, clienti) prima delle schermate?",
+      "options": [
+        "Non conviene, i dati si sistemano sempre da soli",
+        "Perché una base dati chiara evita che l'app cresca in modo disordinato",
+        "Serve solo se si conosce un linguaggio di programmazione",
+        "È rilevante solo per app con pagamenti"
+      ],
+      "correctIndex": 1,
+      "explanation": "Capire le 'cose' che l'app deve gestire e come sono collegate dà una base solida su cui costruire le funzionalità."
+    },
+    {
+      "id": "fe12",
+      "moduleRef": 3,
+      "question": "Come si segnala efficacemente un problema riscontrato in un'app costruita con Lovable?",
+      "options": [
+        "Proponendo direttamente la soluzione tecnica",
+        "Descrivendo con precisione il comportamento osservato, dove si verifica e cosa ci si aspettava",
+        "Dicendo semplicemente 'non funziona'",
+        "Ricominciando sempre l'app da zero"
+      ],
+      "correctIndex": 1,
+      "explanation": "Descrivere sintomo, contesto e aspettativa dà all'AI l'informazione più utile per correggere correttamente."
+    },
+    {
+      "id": "fe13",
+      "moduleRef": 4,
+      "question": "Per quale tipo di contenuto visivo la generazione AI è generalmente più indicata?",
+      "options": [
+        "Il piatto signature da fotografare una volta e riusare per mesi",
+        "Contenuti frequenti, variazioni stagionali e teaser di eventi",
+        "Documenti legali e contrattuali",
+        "Nessun caso, meglio sempre uno shooting reale"
+      ],
+      "correctIndex": 1,
+      "explanation": "Per contenuti ricorrenti e veloci, la generazione AI è più efficiente rispetto a organizzare uno shooting ogni volta."
+    },
+    {
+      "id": "fe14",
+      "moduleRef": 4,
+      "question": "Cosa rende un prompt visivo efficace invece che generico?",
+      "options": [
+        "Usare parole più lunghe possibile",
+        "Dettagli concreti su soggetto, ambientazione, luce e inquadratura",
+        "Scrivere sempre in maiuscolo",
+        "Ripetere la stessa parola più volte"
+      ],
+      "correctIndex": 1,
+      "explanation": "Dettagli concreti producono immagini distintive invece di risultati che sembrano tutti uguali."
+    },
+    {
+      "id": "fe15",
+      "moduleRef": 4,
+      "question": "Come si mantiene la coerenza di brand tra immagini generate in momenti diversi?",
+      "options": [
+        "Non è possibile con l'AI",
+        "Riutilizzando un breve brief di stile (palette, atmosfera, inquadrature) in ogni prompt",
+        "Generando ogni volta uno stile completamente diverso",
+        "Serve sempre un designer professionista esterno"
+      ],
+      "correctIndex": 1,
+      "explanation": "Un brief di stile riutilizzato come base per ogni prompt mantiene coerenza visiva nel tempo."
+    },
+    {
+      "id": "fe16",
+      "moduleRef": 4,
+      "question": "Perché è importante non usare contenuti generati per promettere qualcosa che il locale reale non offre?",
+      "options": [
+        "Non è un problema reale",
+        "Perché danneggia la fiducia dei clienti più di quanto aiuti il post",
+        "Solo per motivi legali generici",
+        "Perché le immagini generate sono sempre di bassa qualità"
+      ],
+      "correctIndex": 1,
+      "explanation": "Un contenuto che promette un'esperienza diversa dalla realtà crea aspettative disattese e danneggia la fiducia nel brand."
+    },
+    {
+      "id": "fe17",
+      "moduleRef": 5,
+      "question": "Qual è la differenza principale tra un semplice prompt e un agente?",
+      "options": [
+        "Un agente usa sempre un modello AI diverso",
+        "Un agente ha istruzioni stabili, un compito ricorrente definito ed eventualmente strumenti per agire in autonomia",
+        "Non c'è alcuna differenza pratica",
+        "Un agente richiede sempre di saper programmare"
+      ],
+      "correctIndex": 1,
+      "explanation": "Un agente si distingue per istruzioni stabili, ambito ricorrente definito e, quando serve, strumenti che gli permettono di agire senza guida passo-passo."
+    },
+    {
+      "id": "fe18",
+      "moduleRef": 5,
+      "question": "Perché un ambito ristretto rende un agente più affidabile?",
+      "options": [
+        "Perché lo rende più prevedibile e verificabile rispetto a uno che prova a fare tutto",
+        "Non è vero, un ambito ampio è sempre preferibile",
+        "Solo per motivi di costo",
+        "Perché riduce il numero di parole nelle istruzioni"
+      ],
+      "correctIndex": 0,
+      "explanation": "Un ambito ristretto rende più facile capire se l'agente ha fatto un buon lavoro e correggerlo se sbaglia."
+    },
+    {
+      "id": "fe19",
+      "moduleRef": 5,
+      "question": "Quale tipo di azione dovrebbe sempre passare da una revisione umana prima di essere eseguita da un agente?",
+      "options": [
+        "Scrivere una bozza interna da rivedere",
+        "Fare un riassunto per uso personale",
+        "Inviare un'email a un cliente o pubblicare un contenuto pubblico",
+        "Suggerire un'idea di testo"
+      ],
+      "correctIndex": 2,
+      "explanation": "Le azioni difficili da annullare o visibili all'esterno devono sempre passare da un controllo umano."
+    },
+    {
+      "id": "fe20",
+      "moduleRef": 5,
+      "question": "Cosa bisognerebbe fare se un agente sbaglia spesso lo stesso tipo di compito?",
+      "options": [
+        "Dargli più autonomia per compensare",
+        "Ignorare l'errore se non è grave",
+        "Correggere le istruzioni alla radice o restringere ulteriormente il suo ambito",
+        "Cambiare argomento all'agente ogni volta"
+      ],
+      "correctIndex": 2,
+      "explanation": "Un errore sistematico segnala che le istruzioni vanno corrette o l'ambito ristretto, non che serve più libertà."
+    },
+    {
+      "id": "fe21",
+      "moduleRef": 6,
+      "question": "Qual è, secondo il corso, il vero valore duraturo di saper usare bene l'AI?",
+      "options": [
+        "La competenza stessa, che resterà sempre rara",
+        "Cosa si costruisce con quella competenza (prodotto, base clienti, offerta specifica)",
+        "Conoscere più strumenti AI possibile",
+        "Nessuno, è una moda temporanea"
+      ],
+      "correctIndex": 1,
+      "explanation": "La competenza da sola si diffonderà; il vantaggio duraturo è ciò che si costruisce concretamente con essa."
+    },
+    {
+      "id": "fe22",
+      "moduleRef": 6,
+      "question": "Qual è il vantaggio competitivo più forte per chi vuole monetizzare le proprie competenze AI partendo da un settore specifico (es. hospitality)?",
+      "options": [
+        "Conoscere più strumenti AI possibile in astratto",
+        "Applicare l'AI a un problema reale di un settore conosciuto dall'interno",
+        "Offrire sempre i prezzi più bassi del mercato",
+        "Usare sempre l'ultimo modello disponibile"
+      ],
+      "correctIndex": 1,
+      "explanation": "La specificità settoriale è un vantaggio più difendibile della sola competenza tecnica generica."
+    },
+    {
+      "id": "fe23",
+      "moduleRef": 6,
+      "question": "Perché validare un'idea prima di costruirla resta importante anche se l'AI velocizza la costruzione?",
+      "options": [
+        "Non è più importante oggi",
+        "Perché costruire in fretta qualcosa che nessuno vuole resta comunque tempo perso",
+        "È richiesto per legge",
+        "Rende il prodotto tecnicamente più veloce"
+      ],
+      "correctIndex": 1,
+      "explanation": "La velocità di costruzione non elimina il rischio di costruire qualcosa senza domanda reale."
+    },
+    {
+      "id": "fe24",
+      "moduleRef": 6,
+      "question": "Su cosa dovrebbe basarsi principalmente il prezzo di un prodotto o servizio costruito con l'AI?",
+      "options": [
+        "Sul tempo impiegato a produrlo",
+        "Sul valore che genera per chi lo compra",
+        "Sul prezzo più basso possibile per battere la concorrenza",
+        "Sul costo dell'abbonamento allo strumento AI usato"
+      ],
+      "correctIndex": 1,
+      "explanation": "Il prezzo giusto riflette il valore per il cliente, non il tempo o costo di produzione."
+    }
+  ],
+  "openQuestions": [
+    {
+      "id": "open-craft",
+      "prompt": "Scrivi un prompt completo usando il framework C.R.A.F.T. per un caso reale del tuo pub o di SmartPub (es. una campagna email, un post per un evento, la descrizione di una funzionalità).",
+      "checklist": [
+        "Il Contesto è definito con chiarezza (chi sei, settore, situazione di partenza)",
+        "Il Ruolo richiesto all'AI è specifico e pertinente al compito",
+        "L'Azione richiesta è inequivocabile, con un verbo chiaro",
+        "Il Formato dell'output è specificato (lunghezza, struttura)",
+        "Il Tono è coerente con l'obiettivo e il pubblico"
+      ]
+    },
+    {
+      "id": "open-agente",
+      "prompt": "Scrivi le istruzioni complete per un agente che svolga un compito ricorrente reale nel tuo business (es. bozze di risposta alle recensioni, riepilogo settimanale, triage di richieste).",
+      "checklist": [
+        "L'ambito del compito è ristretto e specifico, non generico",
+        "Il formato dell'output atteso è chiaro (lunghezza, struttura, tono)",
+        "Sono indicati criteri chiari per capire se il risultato è \"buono\"",
+        "È presente almeno un guardrail esplicito su cosa l'agente non deve mai fare da solo"
+      ]
+    },
+    {
+      "id": "open-monetizzazione",
+      "prompt": "Descrivi in un paragrafo un'idea di monetizzazione basata su quanto costruito in questo corso (servizio, prodotto SaaS, formazione o consulenza): a chi è rivolta, quale problema specifico risolve, e come valideresti la domanda prima di costruire.",
+      "checklist": [
+        "Il pubblico target è definito in modo specifico, non generico",
+        "Il problema risolto è concreto e riconoscibile da chi lo vive",
+        "Il valore è descritto in termini di risultato per il cliente, non di tempo/costo di produzione",
+        "Sono indicati modi concreti per validare la domanda prima di costruire"
+      ]
+    }
+  ]
 }

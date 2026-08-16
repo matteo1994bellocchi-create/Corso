@@ -18,6 +18,7 @@ export type FinalExamProgress = {
 
 export type ProgressState = {
   version: 1;
+  studentName: string;
   modules: Record<string, ModuleProgress>;
   finalExam: FinalExamProgress;
 };
@@ -38,6 +39,7 @@ export const emptyFinalExamProgress: FinalExamProgress = {
 
 export const emptyProgressState: ProgressState = {
   version: 1,
+  studentName: 'Matteo',
   modules: {},
   finalExam: emptyFinalExamProgress,
 };

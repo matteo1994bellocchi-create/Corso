@@ -2,23 +2,183 @@
   "slug": "come-monetizzare",
   "number": 6,
   "title": "Come monetizzare tutto questo",
-  "subtitle": "Trasformare le competenze AI in un prodotto o servizio che genera reddito",
-  "estimatedMinutes": 30,
+  "subtitle": "Da competenza personale a qualcosa che genera reddito",
+  "estimatedMinutes": 40,
   "theory": [
     {
-      "id": "contenuto-in-arrivo",
-      "title": "Contenuto in arrivo",
-      "collapsible": false,
+      "id": "dal-uso-personale-al-prodotto",
+      "title": "Dal \"lo uso per me\" al \"lo vendo\"",
+      "collapsible": true,
+      "defaultOpen": true,
       "blocks": [
-        { "type": "callout", "variant": "insight", "title": "Modulo in preparazione", "text": "Questo modulo è ancora un placeholder. Incolla il contenuto testuale completo in questo file JSON (src/content/module-6.json) seguendo lo schema descritto in CONTENT_GUIDE.md, poi il quiz verrà generato in modo coerente con quel contenuto." }
+        { "type": "paragraph", "text": "Fino a questo modulo hai usato l'AI per lavorare meglio e più in fretta nel tuo pub. Questo modulo affronta la domanda successiva: come si trasforma questa competenza in qualcosa che genera reddito oltre al tuo business principale — un servizio, un prodotto come SmartPub, o persino questo stesso corso, rivenduto ad altri." },
+        { "type": "callout", "variant": "insight", "title": "Il vantaggio è temporaneo, non permanente", "text": "Saper usare bene l'AI oggi è ancora raro. Ma la competenza da sola si diffonderà: il vero valore duraturo è cosa costruisci con quella competenza — un prodotto, una base di clienti, un'offerta specifica — non la competenza in sé." }
+      ]
+    },
+    {
+      "id": "modelli-realistici",
+      "title": "I modelli di business più realistici per chi parte da zero",
+      "collapsible": true,
+      "defaultOpen": true,
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Servizio produttizzato — offri un risultato specifico e ricorrente ad altre attività simili alla tua (es. \"gestione contenuti social con AI per pub e ristoranti\"), con un prezzo fisso invece di ore fatturate",
+            "Prodotto SaaS — come SmartPub: uno strumento che risolve un problema specifico per un settore che conosci dall'interno",
+            "Formazione — impacchettare quello che hai imparato (come questo stesso corso) e venderlo a chi è nella tua stessa situazione di partenza",
+            "Consulenza mirata — aiutare altre attività ad adottare gli stessi strumenti, sfruttando la tua esperienza pratica reale, non solo teorica"
+          ]
+        },
+        { "type": "callout", "variant": "tip", "title": "Il tuo vantaggio competitivo più forte", "text": "Non è \"sapere usare l'AI\" in astratto — è saperla applicare a un problema reale del settore hospitality, che conosci meglio della maggior parte di chi vende corsi o strumenti generici. Vendi quella specificità, non la tecnologia." }
+      ]
+    },
+    {
+      "id": "validare-prima-di-costruire",
+      "title": "Validare prima di costruire",
+      "collapsible": true,
+      "defaultOpen": true,
+      "blocks": [
+        { "type": "paragraph", "text": "L'errore più comune, reso ancora più facile dall'AI, è costruire prima di sapere se qualcuno lo vuole davvero. Proprio perché ora è veloce ed economico costruire un prodotto (Lovable), la tentazione di partire subito a costruire è più forte che mai — ma il tempo risparmiato in costruzione va investito nel validare l'idea, non saltato del tutto." },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Parla con 5-10 persone che avrebbero lo stesso problema, prima di costruire qualsiasi cosa",
+            "Chiedi se pagherebbero per una soluzione, non solo se \"sarebbe utile\" — la seconda risposta è quasi sempre sì",
+            "Costruisci la versione più piccola possibile che risolve il problema centrale, non quella più completa",
+            "Lascia che siano i primi utenti reali a dirti cosa aggiungere dopo, non le tue supposizioni"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prezzo-e-posizionamento",
+      "title": "Prezzo e posizionamento quando i costi di produzione crollano",
+      "collapsible": true,
+      "defaultOpen": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Se l'AI rende più economico produrre contenuti, software o servizi, la tentazione è abbassare i prezzi per competere. Ma il prezzo giusto dipende dal valore che il risultato genera per chi lo compra, non da quanto ti è costato produrlo. Un post scritto in 2 minuti che fa vendere di più un evento vale comunque quanto il risultato che produce, non quanto il tempo speso a scriverlo." },
+        { "type": "callout", "variant": "warning", "title": "Attenzione alla trappola del \"tanto lo fa l'AI\"", "text": "Se comunichi il tuo prodotto o servizio come \"fatto con l'AI\" invece che per il problema specifico che risolve, rischi di essere percepito come sostituibile con qualsiasi altro strumento AI generico. Vendi il risultato, non lo strumento." }
+      ]
+    },
+    {
+      "id": "da-corso-a-prodotto",
+      "title": "Da questo corso a un prodotto vendibile",
+      "collapsible": true,
+      "defaultOpen": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Questo stesso corso è un esempio concreto del principio di questo modulo: un percorso che hai scritto per te stesso, strutturato bene, può diventare un prodotto per altri proprietari di attività nel tuo stesso settore che vogliono lo stesso vantaggio che stai costruendo tu. Non serve reinventarlo da zero — serve renderlo accessibile a chi parte dal tuo stesso punto." },
+        { "type": "quote", "text": "Il prodotto più facile da vendere è spesso quello che hai già costruito per risolvere il tuo problema." }
       ]
     }
   ],
-  "examples": [],
+  "examples": [
+    {
+      "id": "esempio-validazione",
+      "title": "Un prompt per preparare la validazione di un'idea",
+      "collapsible": true,
+      "defaultOpen": true,
+      "blocks": [
+        { "type": "prompt", "example": {
+            "label": "Prompt per preparare interviste di validazione",
+            "prompt": "Sto valutando di offrire un servizio di gestione contenuti social basato sull'AI per altri pub e ristoranti indipendenti nel Regno Unito. Scrivimi 5 domande da fare a potenziali clienti per capire se questo problema è abbastanza sentito da farli pagare per risolverlo, evitando domande che portano a risposte scontate tipo \"sarebbe utile?\".",
+            "note": "L'obiettivo è raccogliere segnali reali di domanda, non conferme educate."
+          } }
+      ]
+    },
+    {
+      "id": "esempio-posizionamento",
+      "title": "Un prompt per affinare il posizionamento di un'offerta",
+      "collapsible": true,
+      "defaultOpen": false,
+      "blocks": [
+        { "type": "prompt", "example": {
+            "label": "Prompt per posizionamento",
+            "prompt": "Ho un servizio che gestisce i contenuti social di pub e ristoranti indipendenti usando l'AI, a un prezzo fisso mensile. Aiutami a scrivere una singola frase di posizionamento che si concentri sul risultato per il cliente (più clienti nei giorni deboli, meno tempo speso sui social) e non sulla tecnologia usata per ottenerlo."
+          } }
+      ]
+    }
+  ],
   "exercise": {
-    "title": "Esercizio in arrivo",
-    "instructions": "Verrà definito insieme al contenuto completo del modulo."
+    "title": "Definisci la tua prima idea di monetizzazione",
+    "instructions": "Scegli una delle strade viste in questo modulo (servizio produttizzato, SaaS, formazione, consulenza) applicata a quello che hai già — il tuo pub, SmartPub, o questo stesso corso. Scrivi in un paragrafo: a chi è rivolta, quale problema specifico risolve, e quanto varrebbe per chi lo compra (non quanto costa a te produrlo). Poi scrivi le 3 domande che faresti a un potenziale cliente per validare l'idea prima di costruire qualsiasi cosa.",
+    "hint": "Se fai fatica a stimare il valore per il cliente, chiediti: \"quanto tempo o denaro gli farebbe risparmiare o guadagnare in un mese?\" — quella cifra è un punto di partenza migliore del tuo tempo di produzione."
   },
-  "quiz": [],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Qual è, secondo il modulo, il vero valore duraturo di saper usare bene l'AI?",
+      "options": [
+        "La competenza stessa, che resterà sempre rara",
+        "Cosa costruisci con quella competenza (prodotto, base clienti, offerta specifica)",
+        "Il numero di strumenti AI diversi che si conoscono",
+        "Nessuno, è solo una moda temporanea"
+      ],
+      "correctIndex": 1,
+      "explanation": "La competenza da sola si diffonderà nel tempo; il vantaggio duraturo è ciò che costruisci concretamente con quella competenza."
+    },
+    {
+      "id": "q2",
+      "question": "Qual è il vantaggio competitivo più forte per chi, come un proprietario di pub, vuole monetizzare le proprie competenze AI?",
+      "options": [
+        "Conoscere più strumenti AI possibile in astratto",
+        "Applicare l'AI a un problema reale di un settore che si conosce dall'interno",
+        "Offrire i prezzi più bassi del mercato",
+        "Usare sempre l'ultimo modello AI disponibile"
+      ],
+      "correctIndex": 1,
+      "explanation": "La specificità settoriale — conoscere davvero il problema che si risolve — è un vantaggio più difendibile della sola conoscenza tecnica generica."
+    },
+    {
+      "id": "q3",
+      "question": "Perché validare un'idea prima di costruirla resta importante anche se l'AI rende la costruzione più veloce?",
+      "options": [
+        "Non è più importante, si può sempre costruire e vedere cosa succede",
+        "Perché costruire velocemente qualcosa che nessuno vuole resta comunque tempo perso",
+        "Perché la validazione è richiesta per legge",
+        "Perché rende il prodotto tecnicamente più stabile"
+      ],
+      "correctIndex": 1,
+      "explanation": "La velocità di costruzione non elimina il rischio di costruire qualcosa che non risponde a una domanda reale: la validazione resta necessaria."
+    },
+    {
+      "id": "q4",
+      "question": "Su cosa dovrebbe basarsi principalmente il prezzo di un prodotto o servizio costruito con l'AI?",
+      "options": [
+        "Sul tempo impiegato a produrlo",
+        "Sul valore che genera per chi lo compra",
+        "Sul prezzo più basso possibile per battere la concorrenza",
+        "Sul costo dell'abbonamento allo strumento AI usato"
+      ],
+      "correctIndex": 1,
+      "explanation": "Il prezzo giusto riflette il valore/risultato per il cliente, non il tempo o costo di produzione, specialmente quando quest'ultimo si riduce grazie all'AI."
+    },
+    {
+      "id": "q5",
+      "question": "Qual è il rischio di comunicare un'offerta come \"fatta con l'AI\" invece che per il problema che risolve?",
+      "options": [
+        "Nessuno, è sempre un punto di forza",
+        "Rischia di sembrare sostituibile con qualsiasi altro strumento AI generico",
+        "Aumenta automaticamente la fiducia dei clienti",
+        "È un obbligo di trasparenza legale"
+      ],
+      "correctIndex": 1,
+      "explanation": "Enfatizzare lo strumento invece del risultato specifico rende l'offerta facilmente confondibile con qualunque altra soluzione AI generica sul mercato."
+    },
+    {
+      "id": "q6",
+      "question": "Perché questo stesso corso viene citato come esempio di prodotto potenzialmente vendibile?",
+      "options": [
+        "Perché tutti i corsi si vendono automaticamente",
+        "Perché è già strutturato e risolve lo stesso problema per altri proprietari di attività simili",
+        "Perché non richiede alcun adattamento per essere venduto",
+        "Perché non ha nulla a che fare con la validazione"
+      ],
+      "correctIndex": 1,
+      "explanation": "Un percorso già costruito per risolvere un proprio problema, se ben strutturato, può servire ad altri che partono dalla stessa situazione — è un esempio concreto del principio di questo modulo."
+    }
+  ],
   "passingScore": 70
 }

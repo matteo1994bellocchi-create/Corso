@@ -2,23 +2,183 @@
   "slug": "lovable-backend-frontend",
   "number": 3,
   "title": "Lovable — costruzione backend/frontend",
-  "subtitle": "Costruire applicazioni complete con Lovable, dal frontend al backend",
-  "estimatedMinutes": 30,
+  "subtitle": "Da un'idea descritta a parole a un'applicazione web funzionante",
+  "estimatedMinutes": 40,
   "theory": [
     {
-      "id": "contenuto-in-arrivo",
-      "title": "Contenuto in arrivo",
-      "collapsible": false,
+      "id": "cose-lovable",
+      "title": "Cos'è Lovable e perché cambia le cose",
+      "collapsible": true,
+      "defaultOpen": true,
       "blocks": [
-        { "type": "callout", "variant": "insight", "title": "Modulo in preparazione", "text": "Questo modulo è ancora un placeholder. Incolla il contenuto testuale completo in questo file JSON (src/content/module-3.json) seguendo lo schema descritto in CONTENT_GUIDE.md, poi il quiz verrà generato in modo coerente con quel contenuto." }
+        { "type": "paragraph", "text": "Lovable è uno strumento che costruisce applicazioni web vere — con frontend, backend e database — a partire da descrizioni scritte in linguaggio naturale. Non stai scrivendo codice: stai descrivendo cosa vuoi che l'applicazione faccia, e l'AI genera e modifica il codice per te, in tempo reale, mostrandoti subito il risultato." },
+        { "type": "callout", "variant": "insight", "title": "Il salto che conta per te", "text": "Fino a poco tempo fa, costruire una pagina di prenotazione per il pub, o un piccolo strumento interno per SmartPub, richiedeva assumere uno sviluppatore o passare mesi a imparare a programmare. Ora puoi descriverlo e vederlo prendere forma nel giro di un pomeriggio." }
+      ]
+    },
+    {
+      "id": "flusso-di-lavoro",
+      "title": "Il flusso di lavoro: dal prompt alla prima versione funzionante",
+      "collapsible": true,
+      "defaultOpen": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Il modo più efficace di lavorare con Lovable non è descrivere l'app intera dei tuoi sogni al primo prompt. È partire da una versione minima che funziona, guardarla, e poi aggiungere una funzionalità alla volta — esattamente come l'iterazione che hai imparato nel Modulo 1, applicata alla costruzione di software." },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Descrivi la funzionalità centrale, quella senza cui l'app non ha senso",
+            "Guarda il risultato, provalo come farebbe un utente vero",
+            "Chiedi una modifica alla volta, specifica e verificabile",
+            "Solo quando il nucleo funziona bene, aggiungi funzionalità secondarie"
+          ]
+        },
+        { "type": "callout", "variant": "warning", "title": "L'errore più costoso", "text": "Chiedere tutto insieme (\"crea un'app di prenotazioni con login, pagamenti, notifiche email e dashboard admin\") produce quasi sempre qualcosa di fragile. Scomponi sempre in passaggi verificabili." }
+      ]
+    },
+    {
+      "id": "progettare-i-dati",
+      "title": "Progettare i dati prima delle schermate",
+      "collapsible": true,
+      "defaultOpen": true,
+      "blocks": [
+        { "type": "paragraph", "text": "Prima di descrivere come deve apparire un'app, conviene pensare a cosa deve \"ricordare\". Se stai costruendo un sistema di prenotazione tavoli, i dati di base sono probabilmente: tavoli, prenotazioni, clienti, orari. Descrivere questi dati con chiarezza nel prompt iniziale evita che l'app cresca in modo disordinato man mano che aggiungi funzionalità." },
+        { "type": "paragraph", "text": "Non serve conoscere termini tecnici da sviluppatore: basta descrivere le \"cose\" che l'app deve gestire e come sono collegate tra loro (\"ogni prenotazione appartiene a un cliente e a un tavolo, in un orario specifico\")." }
+      ]
+    },
+    {
+      "id": "iterare-senza-rompere",
+      "title": "Iterare senza rompere quello che già funziona",
+      "collapsible": true,
+      "defaultOpen": false,
+      "blocks": [
+        { "type": "paragraph", "text": "Quando qualcosa non funziona come vuoi, descrivi il comportamento sbagliato con precisione — cosa succede, cosa ti aspettavi invece — più che proporre tu la soluzione tecnica. \"Il bottone di conferma prenotazione non fa nulla quando lo premo da telefono\" è molto più utile di un'idea vaga di come \"aggiustarlo\"." },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Descrivi il problema osservato, non la causa che immagini",
+            "Indica sempre dove si verifica (quale pagina, quale azione)",
+            "Chiedi una correzione alla volta, poi verifica prima di procedere",
+            "Se qualcosa che funzionava si rompe dopo una modifica, dillo subito: è più facile tornare indietro di un passo che di dieci"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "backend-integrato",
+      "title": "Backend integrato: autenticazione, database, dati reali",
+      "collapsible": true,
+      "defaultOpen": false,
+      "blocks": [
+        { "type": "paragraph", "text": "La parte più potente di Lovable è che non costruisce solo l'interfaccia: collega anche un database vero e, quando serve, un sistema di login. Questo significa che un'app costruita così può davvero salvare prenotazioni, gestire utenti diversi, e crescere — non è solo un prototipo da buttare." },
+        { "type": "quote", "text": "La differenza tra un prototipo e un prodotto, oggi, è molto più piccola di quanto pensi." }
       ]
     }
   ],
-  "examples": [],
+  "examples": [
+    {
+      "id": "esempio-prompt-iniziale",
+      "title": "Descrivere la prima versione di un'app",
+      "collapsible": true,
+      "defaultOpen": true,
+      "blocks": [
+        { "type": "prompt", "example": {
+            "label": "Prompt per la versione minima",
+            "prompt": "Crea un'app per gestire le prenotazioni dei tavoli del mio pub. Dati principali: tavoli (numero, posti a sedere), prenotazioni (nome cliente, telefono, data, orario, numero persone, tavolo assegnato). Nella schermata principale voglio vedere le prenotazioni della giornata in ordine di orario. Un pulsante per aggiungere una nuova prenotazione con un modulo semplice.",
+            "note": "Nota cosa manca di proposito: niente login, niente notifiche, niente pagamenti. Prima il nucleo, poi il resto."
+          } }
+      ]
+    },
+    {
+      "id": "esempio-iterazione-funzionalita",
+      "title": "Aggiungere una funzionalità un passo alla volta",
+      "collapsible": true,
+      "defaultOpen": false,
+      "blocks": [
+        { "type": "prompt", "example": { "label": "Passo 1", "prompt": "Ora aggiungi un modo per segnare una prenotazione come \"arrivata\" o \"no-show\" con un semplice tocco sulla riga corrispondente." } },
+        { "type": "prompt", "example": { "label": "Passo 2 (dopo aver verificato il passo 1)", "prompt": "Bene, funziona. Ora aggiungi un filtro in alto per vedere solo le prenotazioni di un tavolo specifico." } },
+        { "type": "prompt", "example": { "label": "Segnalare un problema", "prompt": "Quando aggiungo una prenotazione per un tavolo già occupato in quell'orario, l'app non avvisa in nessun modo e sovrascrive silenziosamente. Voglio invece un avviso chiaro prima di confermare." } }
+      ]
+    }
+  ],
   "exercise": {
-    "title": "Esercizio in arrivo",
-    "instructions": "Verrà definito insieme al contenuto completo del modulo."
+    "title": "Progetta (a parole) una funzionalità reale per SmartPub",
+    "instructions": "Scegli una funzionalità semplice ma reale che vorresti in SmartPub o nel tuo pub (es. lista d'attesa per i tavoli, modulo di feedback post-visita, calendario eventi). Scrivi il prompt che useresti per descriverla a Lovable: definisci i dati coinvolti, la schermata principale, e cosa deve poter fare l'utente. Poi scrivi un secondo prompt di follow-up per una funzionalità aggiuntiva, come se la prima versione fosse già pronta.",
+    "hint": "Se fai fatica a partire, chiediti: \"qual è l'unica cosa che questa app deve fare per essere già utile, anche senza nient'altro?\" — parti da lì."
   },
-  "quiz": [],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Cosa costruisce concretamente Lovable a partire da un prompt?",
+      "options": [
+        "Solo mockup grafici da mostrare ai clienti",
+        "Un'applicazione web reale con frontend, backend e database",
+        "Solo testi di marketing per un'app",
+        "Presentazioni PowerPoint"
+      ],
+      "correctIndex": 1,
+      "explanation": "Lovable genera codice reale per un'applicazione funzionante, non solo una rappresentazione grafica: frontend, backend e database inclusi."
+    },
+    {
+      "id": "q2",
+      "question": "Qual è l'approccio più efficace per iniziare a costruire un'app con Lovable?",
+      "options": [
+        "Descrivere subito tutte le funzionalità possibili in un unico prompt",
+        "Partire da una versione minima funzionante e aggiungere funzionalità un passo alla volta",
+        "Costruire prima la grafica, poi pensare ai dati",
+        "Evitare di provare l'app finché non è completa al 100%"
+      ],
+      "correctIndex": 1,
+      "explanation": "Costruire in modo incrementale, verificando ogni passaggio, produce risultati più solidi che chiedere tutto insieme in un prompt gigante."
+    },
+    {
+      "id": "q3",
+      "question": "Perché conviene pensare ai dati prima di descrivere le schermate?",
+      "options": [
+        "Non conviene, i dati si sistemano sempre da soli",
+        "Perché definire cosa l'app deve \"ricordare\" e come le informazioni sono collegate evita che cresca in modo disordinato",
+        "Serve solo se si conosce un linguaggio di programmazione",
+        "Serve solo per app con pagamenti"
+      ],
+      "correctIndex": 1,
+      "explanation": "Capire quali \"cose\" l'app deve gestire (prenotazioni, clienti, tavoli...) e come sono collegate dà una base solida su cui costruire le schermate."
+    },
+    {
+      "id": "q4",
+      "question": "Come si segnala efficacemente un problema (bug) in un'app costruita con Lovable?",
+      "options": [
+        "Proponendo direttamente la soluzione tecnica da implementare",
+        "Descrivendo il comportamento osservato con precisione: cosa succede, dove, e cosa ti aspettavi invece",
+        "Dicendo semplicemente \"non funziona\"",
+        "Ricominciando l'app da zero"
+      ],
+      "correctIndex": 1,
+      "explanation": "Descrivere sintomo, contesto e aspettativa (senza indovinare la causa tecnica) dà all'AI l'informazione più utile per correggere il problema correttamente."
+    },
+    {
+      "id": "q5",
+      "question": "Cosa significa che Lovable include un \"backend integrato\"?",
+      "options": [
+        "Che serve comunque un programmatore per farlo funzionare davvero",
+        "Che l'app costruita è solo un prototipo visivo, senza dati reali",
+        "Che l'app può salvare dati reali, gestire utenti e login, e non è solo un prototipo da buttare",
+        "Che serve un abbonamento separato per ogni funzionalità"
+      ],
+      "correctIndex": 2,
+      "explanation": "Il backend integrato (database, autenticazione) rende l'app costruita capace di gestire dati reali e utenti, avvicinandola a un prodotto vero e non solo a un mockup."
+    },
+    {
+      "id": "q6",
+      "question": "Qual è un rischio concreto nel chiedere troppe funzionalità insieme in un unico prompt?",
+      "options": [
+        "Nessuno, più dettagli si danno meglio è sempre",
+        "L'app risulta quasi sempre più fragile e difficile da correggere",
+        "L'app diventa automaticamente più sicura",
+        "Il costo aumenta ma la qualità resta identica"
+      ],
+      "correctIndex": 1,
+      "explanation": "Chiedere tutto insieme (login, pagamenti, notifiche, dashboard) in un solo prompt produce spesso risultati fragili: meglio scomporre in passaggi verificabili uno alla volta."
+    }
+  ],
   "passingScore": 70
 }
