@@ -22,7 +22,8 @@ Non serve sapere niente di programmazione. Leggila con calma, un capitolo alla v
 8. [Creare gli account passo passo](#8--creare-gli-account-passo-passo)
 9. [Le regole d'oro della sicurezza](#9-%EF%B8%8F-le-regole-doro-della-sicurezza)
 10. [Come parlare con Claude](#10--come-parlare-con-claude)
-11. [Il piccolo dizionario](#11--il-piccolo-dizionario)
+11. [Se non trovi qualcosa](#11--se-non-trovi-qualcosa)
+12. [Il piccolo dizionario](#12--il-piccolo-dizionario)
 
 ---
 
@@ -338,7 +339,77 @@ Claude capisce l'italiano normale. Più sei chiaro, meglio lavora.
 
 ---
 
-## 11. 📖 Il piccolo dizionario
+## 11. 🧭 Se non trovi qualcosa
+
+Succede a tutti! I siti cambiano spesso l'aspetto e i pulsanti si spostano.
+**Non preoccuparti:** scrivi a Claude e lui ti guida **un passo alla volta**.
+
+### Cosa scrivere a Claude
+> *"Non trovo [cosa]. Sono sul sito [quale]. Vedo [descrivi cosa vedi]."*
+
+Per esempio:
+> *"Non trovo dove si attiva la 2FA su GitHub. Sono nella pagina del mio profilo e vedo la mia foto e i miei repository."*
+
+Ancora meglio: **fai uno screenshot** (una foto dello schermo) e mandalo a Claude.
+⚠️ Prima di mandarlo, controlla che **non si vedano password, chiavi o codici**!
+
+### Come ti risponderà Claude
+Claude ti darà:
+1. **Passi numerati**, uno alla volta, e dopo ognuno ti chiederà *"Fatto? Cosa vedi adesso?"*
+2. **Dove cliccare esattamente** (es. *"in alto a destra, sulla tua foto"*) e il **testo del pulsante** così com'è, spesso in inglese.
+3. **Il link diretto** alla pagina giusta, quando c'è.
+4. **Codice pronto da copiare**, se serve, dicendoti **dove** incollarlo e **cosa deve succedere** dopo.
+
+### Esempio: "Non trovo dove si attiva la 2FA su GitHub"
+1. Apri questo link: **https://github.com/settings/security**
+2. Cerca il riquadro **"Two-factor authentication"**.
+3. Clicca il pulsante verde **"Enable two-factor authentication"**.
+4. Apri l'app di autenticazione sul telefono → tocca **"+"** → **"Scansiona codice QR"** → inquadra il quadratino sullo schermo.
+5. Scrivi su GitHub il codice di 6 cifre che vedi sul telefono.
+6. GitHub ti mostra i **recovery codes**: clicca **"Download"** e salvali nel password manager.
+7. ✅ Fatto!
+
+### Esempio con codice: provare il sito sul tuo computer
+> Questo serve solo se vuoi vedere il sito sul tuo computer. **Non è obbligatorio**: con Vercel il sito è già online.
+
+**Passo 1 – Installa Node.js** (il "motore" che fa partire il sito)
+Vai su **https://nodejs.org** → scarica la versione **LTS** → installala come un normale programma.
+
+**Passo 2 – Apri il Terminale** (la finestra dove si scrivono i comandi)
+- 🍎 Mac: premi `Cmd + Spazio`, scrivi `Terminale`, premi Invio.
+- 🪟 Windows: premi il tasto Windows, scrivi `PowerShell`, premi Invio.
+
+**Passo 3 – Controlla che Node.js funzioni.** Copia e incolla, poi premi Invio:
+```bash
+node -v
+```
+✅ Deve apparire un numero, tipo `v22.11.0`. Se appare un errore, dillo a Claude.
+
+**Passo 4 – Scarica il progetto.** Copia e incolla, poi premi Invio:
+```bash
+git clone https://github.com/matteo1994bellocchi-create/Corso.git
+cd Corso
+```
+✅ Deve apparire qualcosa come `Cloning into 'Corso'... done.`
+
+**Passo 5 – Installa i pezzi del progetto** (ci vuole un minuto):
+```bash
+npm install
+```
+
+**Passo 6 – Accendi il sito:**
+```bash
+npm run dev
+```
+✅ Deve apparire un indirizzo tipo `http://localhost:5173`. Aprilo nel browser e vedrai il corso! 🎉
+Per spegnere il sito: clicca sul Terminale e premi `Ctrl + C`.
+
+> 🛡️ **Sicurezza:** copia e incolla **solo** comandi che ti ha dato Claude o Davide, e se non capisci cosa fa un comando, **chiedi prima**.
+> Non incollare mai comandi trovati su siti sconosciuti.
+
+---
+
+## 12. 📖 Il piccolo dizionario
 
 | Parola | Cosa vuol dire (da bambino) |
 |---|---|
