@@ -5,6 +5,7 @@ import { FinalExamPage } from './pages/FinalExamPage';
 import { Home } from './pages/Home';
 import { ModulePage } from './pages/ModulePage';
 import { ModuleQuizPage } from './pages/ModuleQuizPage';
+import { ProjectPage } from './pages/ProjectPage';
 import { ProgressProvider } from './store/ProgressContext';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/moduli/:slug/quiz" element={<ModuleQuizPage />} />
             <Route path="/esame-finale" element={<FinalExamPage />} />
             <Route path="/certificato" element={<CertificatePage />} />
+            <Route path="/progetto" element={<ProjectPage />} />
           </Route>
         </Routes>
       </HashRouter>

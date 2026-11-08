@@ -25,6 +25,22 @@ export function Home() {
         </p>
       </section>
 
+      <section className="flex flex-col items-start justify-between gap-4 rounded-2xl bg-gradient-to-br from-brand-600 to-accent-600 p-6 text-white shadow-lg sm:flex-row sm:items-center">
+        <div>
+          <p className="text-xs font-semibold tracking-wide text-white/80 uppercase">Laboratorio</p>
+          <h2 className="text-xl font-bold">🚀 Costruisci il tuo progetto</h2>
+          <p className="text-sm text-white/85">
+            9 domande facili sulla tua idea: ottieni la mappa, il piano e il messaggio per far partire Claude.
+          </p>
+        </div>
+        <Link
+          to="/progetto"
+          className="shrink-0 rounded-xl bg-white px-5 py-2.5 text-sm font-semibold text-brand-700 transition hover:bg-white/90"
+        >
+          Inizia ora
+        </Link>
+      </section>
+
       <section className="grid gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:grid-cols-3 dark:border-slate-800 dark:bg-slate-900">
         <div>
           <p className="text-xs font-semibold tracking-wide text-slate-400 uppercase">Completamento</p>

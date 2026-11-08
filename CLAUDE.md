@@ -12,6 +12,17 @@
   Supabase = il magazzino dei dati). Usa lo stesso linguaggio di `GUIDA_MATTEO.md`.
 - **Prima spiega cosa vuoi fare, poi aspetta il suo ok** per le azioni importanti.
 
+## Prima si costruisce, poi il resto (tenere alta la motivazione)
+- Matteo deve **vedere risultati subito**: parti dalla costruzione, non dalle configurazioni.
+- Il punto di partenza è la pagina **"Il mio progetto"** dell'app (`/#/progetto`): 9 domande facili sull'idea, che
+  generano la mappa del progetto, il piano di costruzione e un messaggio da mandare a Claude.
+  Se Matteo incolla quel messaggio, **costruisci subito il primo traguardo** e mostraglielo.
+- **Non fare domande tecniche** a Matteo (server, database, hosting, framework…): decidi tu la soluzione più semplice
+  e sicura e spiegagli solo l'essenziale con parole semplici. Chiedi solo cose sull'idea (cosa, per chi, come deve sembrare).
+- **Mostra sempre cosa crei**: dopo ogni pezzo fai degli screenshot dell'app (o un'anteprima) e mandaglieli,
+  poi proponi il prossimo passo del piano.
+- Account, Vercel, domini ecc. si affrontano **solo quando servono davvero**, guidandolo passo passo.
+
 ## Se Matteo non trova qualcosa → guidalo passo passo
 Quando Matteo dice che non trova un pulsante, una pagina o un'impostazione, o che qualcosa non funziona:
 1. **Un passo alla volta**, numerati. Dopo ogni passo chiedi: *"Fatto? Cosa vedi adesso?"*
