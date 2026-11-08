@@ -34,6 +34,18 @@ export function Navbar() {
             Dashboard
           </NavLink>
           <NavLink
+            to="/progetto"
+            className={({ isActive }) =>
+              `rounded-lg px-3 py-1.5 transition ${
+                isActive
+                  ? 'bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900'
+                  : 'text-slate-600 hover:bg-slate-200/60 dark:text-slate-300 dark:hover:bg-slate-800'
+              }`
+            }
+          >
+            🚀 <span className="hidden sm:inline">Il mio progetto</span>
+          </NavLink>
+          <NavLink
             to="/esame-finale"
             className={({ isActive }) =>
               `inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 transition ${
